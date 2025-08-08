@@ -1,0 +1,53 @@
+<h1>Weather Forecaster</h1>
+
+<% flash.each do |type, message| %>
+  <div class="flash flash-<%= type %>">
+    <p><%= message %></p>
+  </div>
+<% end %>
+
+<p>Give us your zipcode and address, we'll give you current conditions and a few day forecast.</p>
+
+<%= form_with(method: 'get', local: true)do |form| %>
+  <p><%= form.label :address, "Zip or Address" %></p>
+  <p><%= form.text_field :address, value: @address %></p>
+  <p><%= form.submit 'Fetch' %></p>
+<% end %>
+
+<% if @fetched_at.present? %>
+<div>
+  <h2>Weather for: <%= @address %>.</h2>
+  <p>Fetched <%= time_ago_in_words @fetched_at %> ago.</p>
+
+  <h3>Current Conditions</h3>
+  <dl>
+    <dt>Temp</dt>
+    <dd><%= @current_conditions.temp_f %>F</dd>
+
+    <dt>Feels Like | Windchill</dt>
+    <dd><%= @current_conditions.feelslike_f %> | <%= @current_conditions.windchill_f %></dd>
+
+    <dt>Wind</dt>
+    <dd><%= @current_conditions.wind_mph %>mph[<%= @current_conditions.wind_dir %>]</dd>
+
+    <dt>Humidity</dt>
+    <dd><%= @current_conditions.humidity %></dd>
+  </dl>
+
+  <h3>Forecasts</h3>
+  <% @forecasts.each do |date, forecast| %>
+    <h4><%= date %></h4>
+
+    <dl>
+      <dt>High | Low F</dt>
+      <dd><%= forecast.maxtemp_f %> | <%= forecast.mintemp_f %></dd>
+      <dt>Total Precipitation</dt>
+      <dd><%= forecast.totalprecip_in %>in</dd>
+      <dt>Expect Rain?</dt>
+      <dd><%= forecast.daily_will_it_rain.presence %></dd>
+      <dt>Expect Snow?</dt>
+      <dd><%= forecast.daily_will_it_snow.presence %></dd>
+    </dl>
+  <% end %>
+</div>
+<% end %>
