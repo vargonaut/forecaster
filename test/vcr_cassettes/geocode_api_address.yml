@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://geocode.maps.co/search?api_key=[GEOCODE_API_KEY]&q=123%20Madison%20St.,%20Oak%20Park,%20Illinois
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - geocode.maps.co
+      User-Agent:
+      - http.rb/5.3.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Aug 2025 23:40:04 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '869'
+      Connection:
+      - close
+      Cf-Ray:
+      - 96ba9ded6d6450d3-ORD
+      Access-Control-Allow-Origin:
+      - "*"
+      Last-Modified:
+      - Thu, 07 Aug 2025 22:40:51 GMT
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '3553'
+      Accept-Ranges:
+      - bytes
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=4e5Uc0eCGr6%2BEywwrt91MnmJ2d8h%2F87n3n%2BWuN15ROrso6fCMhaFUCNs9fSG8IQF0mues9C6Miq2HY8SsKJQLkePYiUPro1rNPYOHfruRG%2BTJVc%2BZRgtB038rluM7Cd7LTSyB3hO3KW5nDjpuw%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=3628&min_rtt=3495&rtt_var=1577&sent=4&recv=6&lost=0&retrans=0&sent_bytes=2334&recv_bytes=804&delivery_rate=596099&cwnd=251&unsent_bytes=0&cid=3b02cefca9a8af1a&ts=45&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"place_id":330575448,"licence":"Data © OpenStreetMap contributors,
+        ODbL 1.0. https://osm.org/copyright","osm_type":"way","osm_id":304320607,"boundingbox":["41.8792195","41.8798346","-87.7792638","-87.7785297"],"lat":"41.879491200000004","lon":"-87.77865544088937","display_name":"Oak
+        Park Village Hall, 123, Madison Street, Oak Park, Cook County, Illinois, 60302,
+        United States","class":"amenity","type":"townhall","importance":0.62001},{"place_id":330575657,"licence":"Data
+        © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright","osm_type":"node","osm_id":3549337313,"boundingbox":["41.8792627","41.8793627","-87.7789458","-87.7788458"],"lat":"41.8793127","lon":"-87.7788958","display_name":"Oak
+        Park Police Department, 123, Madison Street, Oak Park, Cook County, Illinois,
+        60302, United States","class":"amenity","type":"police","importance":0.62001}]'
+  recorded_at: Thu, 07 Aug 2025 23:40:04 GMT
+recorded_with: VCR 6.3.1

@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://geocode.maps.co/search?api_key=[GEOCODE_API_KEY]&q=60302
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - geocode.maps.co
+      User-Agent:
+      - http.rb/5.3.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Aug 2025 23:40:04 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Cf-Ray:
+      - 96ba9deccd81000c-ORD
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Last-Modified:
+      - Thu, 07 Aug 2025 22:35:20 GMT
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '3884'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=d2%2BOq%2B6doGtnIdrGvuwAbdc6IpEObkUZlZwAJfJla0nYyYbl%2BiyXmMA50v8gPafewZaEE%2Bg0qaDpY43X7VdY8GPRQNlGYjJbcJXin6kIGcgZTuU11AjczDmsRN%2Bfpz%2BKfUfmNnjJDQ5I3ScwXA%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=4501&min_rtt=4483&rtt_var=1718&sent=4&recv=6&lost=0&retrans=0&sent_bytes=2333&recv_bytes=760&delivery_rate=587346&cwnd=251&unsent_bytes=0&cid=43b349a36d0a976e&ts=48&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"place_id":339574105,"licence":"Data © OpenStreetMap contributors,
+        ODbL 1.0. https://osm.org/copyright","boundingbox":["41.735277198776","42.055277198776","-87.945225440378","-87.625225440378"],"lat":"41.89527719877642","lon":"-87.7852254403782","display_name":"Oak
+        Park, Cook County, Illinois, 60302, United States","class":"place","type":"postcode","importance":0.33499999999999996},{"place_id":337055403,"licence":"Data
+        © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright","boundingbox":["58.363210141475","58.683210141475","27.074025153917","27.394025153917"],"lat":"58.52321014147465","lon":"27.23402515391705","display_name":"Kasepää
+        alevik, Peipsiääre vald, Tartu maakond, 60302, Estonia","class":"place","type":"postcode","importance":0.33499999999999996},{"place_id":338908856,"licence":"Data
+        © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright","boundingbox":["55.1232136","55.4432136","23.095683866667","23.415683866667"],"lat":"55.2832136","lon":"23.255683866666665","display_name":"Girkalnio
+        seniūnija, Raseinių rajono savivaldybė, Kaunas County, 60302, Lithuania","class":"place","type":"postcode","importance":0.33499999999999996},{"place_id":337038804,"licence":"Data
+        © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright","boundingbox":["9.06766305","9.38766305","-83.6152654","-83.2952654"],"lat":"9.22766305","lon":"-83.4552654","display_name":"Volcán,
+        Cantón Buenos Aires, Puntarenas Province, 60302, Costa Rica","class":"place","type":"postcode","importance":0.33499999999999996},{"place_id":291880273,"licence":"Data
+        © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright","osm_type":"way","osm_id":332112478,"boundingbox":["47.1875321","47.1899182","-109.2148792","-109.2121221"],"lat":"47.1893893","lon":"-109.2143609","display_name":"60302,
+        Fergus County, Montana, United States","class":"highway","type":"service","importance":0.18500999999999992},{"place_id":339414994,"licence":"Data
+        © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright","boundingbox":["52.2343145","52.5543145","16.7060284","17.0260284"],"lat":"52.3943145","lon":"16.8660284","display_name":"Grunwald
+        Południe, Poznan, Greater Poland Voivodeship, 60-302, Poland","class":"place","type":"postcode","importance":0.125},{"place_id":120196092,"licence":"Data
+        © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright","osm_type":"node","osm_id":3099925871,"boundingbox":["51.0521037","51.0522037","13.807673","13.807773"],"lat":"51.0521537","lon":"13.807723","display_name":"60302,
+        Schillerplatz, Neugruna, Blasewitz, Dresden, Saxony, 01309, Germany","class":"man_made","type":"street_cabinet","importance":0.11000999999999997},{"place_id":257671969,"licence":"Data
+        © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright","osm_type":"node","osm_id":11140341651,"boundingbox":["42.8174354","42.8175354","-1.5707903","-1.5706903"],"lat":"42.8174854","lon":"-1.5707403","display_name":"60302,
+        Calle Monte Malkaiz, Gorraiz, Valle de Egüés/Eguesibar, Iruñerria / Comarca
+        de Pamplona, Navarre, 31620, Spain","class":"emergency","type":"access_point","importance":0.11000999999999997},{"place_id":283491255,"licence":"Data
+        © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright","osm_type":"node","osm_id":504755052,"boundingbox":["32.606773","32.606873","-117.080048","-117.079948"],"lat":"32.606823","lon":"-117.079998","display_name":"60302,
+        Oxford Street, Harbor Side, Chula Vista, San Diego County, California, 91911,
+        United States","class":"highway","type":"bus_stop","importance":0.11000999999999997},{"place_id":150102237,"licence":"Data
+        © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright","osm_type":"node","osm_id":938659825,"boundingbox":["59.3656672","59.3657672","18.0546972","18.0547972"],"lat":"59.3657172","lon":"18.0547472","display_name":"Universitetet,
+        Lilla Frescativägen, Frescati, Norra Djurgården, Norra Innerstaden, Stockholm,
+        Danderyds kommun, Stockholm County, 114 18, Sweden","class":"highway","type":"bus_stop","importance":9.99999999995449e-6}]'
+  recorded_at: Thu, 07 Aug 2025 23:40:04 GMT
+recorded_with: VCR 6.3.1
